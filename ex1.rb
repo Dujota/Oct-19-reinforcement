@@ -20,9 +20,10 @@ seating_plan.each_with_index do |row, row_index|
      if take_seat.downcase == 'y'
        puts "What is your name?"
        name = gets.chomp.to_s
-       seats_in_row = seating_plan[row_index]
-       seats_in_row.insert(seat_index, name)
-       seats_in_row.delete_at(seat_index + 1)
+       row[seat_index] = name 
+      #  seats_in_row = seating_plan[row_index]
+      #  seats_in_row.insert(seat_index, name)
+      #  seats_in_row.delete_at(seat_index + 1)
      end
     end
   end
